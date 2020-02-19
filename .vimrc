@@ -19,10 +19,9 @@ Plug 'vim-syntastic/syntastic'
 " File Tree
 Plug 'scrooloose/nerdtree'
 " fzf common VIM commands
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " auto insert quote or matching parenthesis
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 " Color schemes
 Plug 'junegunn/seoul256.vim'
 " Info bar
@@ -39,6 +38,13 @@ let g:seoul256_background = 234
 colo seoul256
 
 " Manual mappings
+" Remaps
+nnoremap <Leader><Enter> o<Esc>
+
 " NERDTree
 nnoremap :ntc :NERDTreeClose
 nnoremap :nt :NERDTree
+" FZF
+nnoremap :fzf :FZF
+nnoremap <Leader>f :FZF<space>
+
